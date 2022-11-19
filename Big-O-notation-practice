@@ -1,0 +1,43 @@
+STEP ONE
+
+1. O(n + 10) - O(n)
+<!-- An algorithm has a linear time complexity if the time to execute the algorithm is directly proportional to the input size n. Therefore the time it will take to run the algorithm will increase proportionately as the size of input n increases.
+ -->
+2. O(100 * n) =>  O(n)
+3. O(25) =>  O(1) 
+<!-- 25 is constant -->
+4. O(n^2 + n^3) =>  O(n^3)
+<!-- Smaller terms do not matter -->
+5. O(n + n + n + n) =>  O(n)
+6. O(1000 * log(n) + n) =>  O(n)
+7. O(1000 * n * log(n) + n) =>  O(n log n)
+<!-- don't see why this is different from #6 just because of the extra * n -->
+8. O(2^n + n^2) =>  O(2^n)
+<!-- 2^n > n^2 and smaller terms do not matter  -->
+<!-- question - why is this not directly proportional to the size of n? --> 
+<!-- answer - first one grows faster, try graphing out online with graphing calculator - Desmos -->
+9. O(5 + 3 + 1) =>  O(1)
+<!-- 9 is constant -->
+10. O(n + n^(1/2) + n^2 + n * log(n)^10) => O(n^2)
+<!-- n^2 is always greater than log(n)^10? -->
+
+STEP TWO
+1. O(n) - always logging n
+2. O(n) - will log n or something smaller than n 
+3. O(1) - even if n is 10,000 function will only log 10
+4. O(n) - n is the number of elements in the array, which will all be looped through once
+5. O(n^2) - O(n) operation inside an O(n) operation. Inner loop will run a number of times equivalent to adding up the numbers in array - [1, 2, 3, 4] inner loop runs 10x, [1, 2, 3, 4, 5] inner loop runs 15x.
+6. O(n) - if statements, not loops, string is a length fixed to n
+
+STEP THREE
+1. True - drop the smaller n
+2. True - multiplying by n turns power of 2 to power of 3
+3. False - just the opposite of first question, it's O(n^2) because you drop the + n
+4, 5, 6. O(n) - walking through an array to find a value, which is what these are doing, is O(n)
+7. O(n log(n))
+8. O(n)
+9. O(1)
+10. O(n)
+11. O(1) - same as unshift
+12. O(n)
+13. O(n)
